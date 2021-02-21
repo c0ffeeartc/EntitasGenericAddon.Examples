@@ -1,5 +1,5 @@
 # EntitasGenericAddon.Examples
-Examples for EntitasGenericAddon
+Examples for [EntitasGenericAddon](https://github.com/c0ffeeartc/EntitasGenericAddon)
 
 ## Examples
   - [IdFeature](./Examples/EntitasGenericAddon.Examples.IdFeature)
