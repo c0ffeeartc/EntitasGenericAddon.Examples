@@ -11,7 +11,33 @@ Copy [IdFeature](./IdFeature) folder to your project.
 
 ## Usage
 ```csharp
-// TODO: example
+public static void IdFeatureExample()
+{
+	// some init code above
+
+	Lookup_ScopeManager.RegisterAll( );
+	var contexts = new Contexts();
+	contexts.AddScopedContexts();
+
+	// init id feature right after contexts.AddScopedContexts();
+	contexts.IdFeature_InitAuto();
+
+	// get ScopedContext<T>
+	var contextGame = contexts.Get<Game>();
+	var contextCmd = contexts.Get<Cmd>();
+
+	// use PrimaryEntityIndex through context
+	contextGame.GetEntity( nameof(Id), 32 ); // OK
+	contextCmd.GetEntity( nameof(Id), 32 ); // Runtime Error or Bug
+
+	// Generic use of PrimaryEntityIndex with Compile time correctness
+	contextGame.GetSingleEntBy<Game,Id,Int32>(nameof(Id), 32); // OK
+	contextCmd.GetSingleEntBy<Cmd,Id,Int32>(nameof(Id), 32); // Compilation error
+
+	// Extension method for cleaner API
+	var ent = contextGame.GetEntityById<Game,Id>( 32 );  // OK
+	contextCmd.GetEntityById<Game,Id>( 32 );  // Compilation error
+}
 ```
 
 ## Authors
