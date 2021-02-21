@@ -10,6 +10,25 @@ Copy [IdFeature](./IdFeature) folder to your project.
 > Dll wouldn't work, because this example requires modification of sources to add new Scope<TScope> to Id component
 
 ## Usage
+First make `Id` inherit some `Scope<T>` in [IdScopes.cs](IdFeature/IdScopes.cs)
+```csharp
+// IdScopes.cs
+using Entitas.Generic;
+
+namespace Custom.Scripts
+{
+public partial struct Id
+  : Scope<Game>
+  , Scope<Cmd>
+{
+}
+
+public class Game : IScope { }
+public class Cmd : IScope { }
+}
+```
+
+Then it becomes possible to get entity by id
 ```csharp
 public static void IdFeatureExample()
 {
