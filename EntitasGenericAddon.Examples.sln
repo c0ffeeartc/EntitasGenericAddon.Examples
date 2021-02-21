@@ -1,0 +1,21 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{DC2678A4-932F-4DD6-9155-4CBED32BA7D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntitasGenericAddon.Examples.IdFeature", "Examples\EntitasGenericAddon.Examples.IdFeature\EntitasGenericAddon.Examples.IdFeature.csproj", "{6F01D4ED-8587-4307-B8F5-B664143A95CA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6F01D4ED-8587-4307-B8F5-B664143A95CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F01D4ED-8587-4307-B8F5-B664143A95CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F01D4ED-8587-4307-B8F5-B664143A95CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F01D4ED-8587-4307-B8F5-B664143A95CA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6F01D4ED-8587-4307-B8F5-B664143A95CA} = {DC2678A4-932F-4DD6-9155-4CBED32BA7D5}
+	EndGlobalSection
+EndGlobal
