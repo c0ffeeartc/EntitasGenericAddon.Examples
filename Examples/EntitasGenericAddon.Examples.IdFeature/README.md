@@ -6,8 +6,8 @@ Basic get entity by id functionality example
   - [EntitasGenericAddon](https://github.com/c0ffeeartc/EntitasGenericAddon)
 
 ## Installation
-Copy IdFeature sources folder to your project.
-Dll wouldn't work, because this example requires modification of sources to add new Scope<TScope> to Id component
+Copy [IdFeature](./IdFeature) folder to your project.
+> Dll wouldn't work, because this example requires modification of sources to add new Scope<TScope> to Id component
 
 ## Usage
 ```csharp
