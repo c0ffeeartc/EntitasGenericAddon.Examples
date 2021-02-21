@@ -19,12 +19,6 @@ public partial struct Id
 
 	public 					Int32 					Value;
 	public 					IContext 				Context;
-
-	public					Entity<TScope>			TryGetEnt<TScope>		(  )
-			where TScope : IScope
-	{
-		return (Context as ScopedContext<TScope>).GetEntity(nameof(Id), Value);
-	}
 }
 
 public static class IdFeature
@@ -89,6 +83,13 @@ public static class IdFeature
 			nameof(Id)
 			, context.GetGroup( Matcher<TScope, TComp>.I )
 			, ( e, c ) => ( (StructComponent<Id>)c ).Data.Value );
+	}
+
+	public static			Entity<TScope>			GetEntityById<TScope, TComp>( this ScopedContext<TScope> context, Int32 id )
+			where TScope : IScope
+			where TComp : Scope<TScope>
+	{
+		return context.GetEntity( nameof(Id), id );
 	}
 }
 }
