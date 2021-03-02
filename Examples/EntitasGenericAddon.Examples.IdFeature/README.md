@@ -19,7 +19,7 @@ namespace Custom.Scripts
 {
 public partial struct Id
   : Scope<Game>
-  , Scope<Cmd>
+  //, Scope<Cmd>
 {
 }
 
