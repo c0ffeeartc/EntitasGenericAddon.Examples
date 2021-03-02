@@ -55,7 +55,7 @@ public static void IdFeatureExample()
 
   // Extension method for cleaner API
   var ent = contextGame.GetEntityById<Game,Id>( 32 );  // OK
-  contextCmd.GetEntityById<Game,Id>( 32 );  // Compilation error
+  contextCmd.GetEntityById<Cmd,Id>( 32 );  // Compilation error
 }
 ```
 
